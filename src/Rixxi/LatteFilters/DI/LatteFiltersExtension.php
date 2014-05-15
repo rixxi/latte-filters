@@ -27,7 +27,7 @@ class LatteFiltersExtension extends Nette\DI\CompilerExtension
 
 			foreach ($builder->findByTag(self::TAG_FILTER) as $helper => $definition) {
 				foreach ((array) $definition as $function => $filter) {
-					$this->addFilter($filter, array('@' . $helper, is_string($filter) ? $filter : $function));
+					$this->addFilter($filter, array('@' . $helper, is_string($function) ? $function : $filter));
 				}
 			}
 
