@@ -20,6 +20,10 @@ service:
 		tags:
 			latte.filter: [ money, formatTime: time ]
 
+	-
+		class: DynamicHelperLoader
+		tags: [ latte.filterLoader ]
+
 extensions:
 	latteFilters: Rixxi\LatteFilters\DI\LatteFiltersExtension
 ```
